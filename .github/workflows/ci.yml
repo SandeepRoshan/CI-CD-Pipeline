@@ -29,4 +29,5 @@ jobs:
         run: chmod +x node_modules/.bin/jest
 
       - name: Run Tests
-        run: npx jest --verbose
+        run: npx jest --detectOpenHandles --verbose
+
