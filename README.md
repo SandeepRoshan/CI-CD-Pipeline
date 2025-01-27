@@ -16,15 +16,19 @@ Runs Tests:
 
 **npm test executes the Jest testing framework, which runs the test cases defined in your test/app.test.js file. It checks if the application’s behavior (e.g., sending the correct response on the / endpoint) is working as expected.
 Why Is Each Step Automated?**
+
 **1. Code Checkout (actions/checkout)**
 
 Automation Reason: This step ensures that every time you run the pipeline, you're working with the latest version of the code. Without this, the pipeline would not have access to the most up-to-date version of your repository, which could lead to incorrect or outdated builds.
+
 **2. Node.js Setup (actions/setup-node)**
 
 Automation Reason: This automates the setup of the Node.js runtime and ensures consistency across all environments (e.g., your local machine and GitHub's CI environment). By specifying a Node.js version (16), it guarantees that the right version is used for building and testing your application.
+
 **3. Dependency Installation (npm install)**
 
 Automation Reason: This ensures that the latest dependencies defined in the package.json file are installed automatically. Without automation, developers would need to manually install dependencies every time they run the tests, which is error-prone and inefficient. Automation ensures consistency, as all dependencies are installed the same way every time.
+
 **4. Running Tests (npm test)**
 
 **Automation Reason: Automating tests ensures that every time new code is added, it’s verified automatically. Running tests ensures that the code behaves as expected and prevents bugs from being introduced. It also allows for quick feedback after each code change, which improves the overall development speed and ensures the integrity of your codebase.
